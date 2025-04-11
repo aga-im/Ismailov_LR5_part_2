@@ -24,6 +24,14 @@ void EnterDigit(int& varLink, const string& label){
     }
     varLink = stoi(raw_input);
 }
+bool isFirstNumberGreater(const std::string& first, const std::string& second) {
+    if (!UserInput(first) || !UserInput(second)) {
+        return false; 
+    }
+    int num1 = std::stoi(first);
+    int num2 = std::stoi(second);
+    return num1 > num2;
+}
 int CalcOst(int NumberA, int NumberB){
     return NumberA % NumberB;
 }
